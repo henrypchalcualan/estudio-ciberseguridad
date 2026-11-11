@@ -1,0 +1,14 @@
+---
+title: "Mi aprendizaje en ciberseguridad"
+author: "Chalcualan Silva Henry Patricio"
+date: "2026-11-11"
+output:
+  html_document:
+    toc: false
+    self_contained: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
