@@ -83,6 +83,15 @@ Quiero aprender de manera progresiva y práctica. Por eso, cada tema incluirá:
 
 También registraré los errores y dificultades, porque forman parte del proceso de aprendizaje.
 
+## Explora el contenido
+
+### Linux y administración del sistema
+
+Aprende los fundamentos de Linux, la navegación por el
+sistema de archivos, la gestión de archivos y los permisos.
+
+[Consultar documentación de Linux](linux.html)
+
 ## Inicio del registro público
 
 **11 de noviembre de 2026**
