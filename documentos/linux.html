@@ -9,7 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Chalcualan Silva Henry Patricio" />
+<meta name="author" content />
 
 <meta name="date" content="2026-11-12" />
 
@@ -351,7 +351,7 @@ display: none;
 
 
 <h1 class="title toc-ignore">Linux y administración del sistema</h1>
-<h4 class="author">Chalcualan Silva Henry Patricio</h4>
+<h4 class="author"></h4>
 <h4 class="date">2026-11-12</h4>
 
 </div>
@@ -467,8 +467,8 @@ de archivos de Linux.</p>
 </div>
 <div id="comando-ls" class="section level2">
 <h2>2.2. Comando <code>ls</code></h2>
-<p>El comando <code>ls</code> permite listar los archivos y directorios
-de la ubicación actual.</p>
+<p>El comando <code>ls</code> (list) permite listar los archivos y
+directorios de la ubicación actual.</p>
 <p><strong>Ejemplo:</strong></p>
 <pre class="bash"><code>henry@DESKTOP-JLRA007:~$ ls</code></pre>
 <p><strong>Resultado:</strong></p>
@@ -509,19 +509,22 @@ contenido.</td>
 </tbody>
 </table>
 <p><strong>Ejemplos de los distintos comandos</strong></p>
+<p>Con el comando <code>ls -l</code></p>
 <p><strong>Ejemplo:</strong></p>
 <pre class="bash"><code>henry@DESKTOP-JLRA007:~$ ls -l</code></pre>
 <p><strong>Resultado:</strong></p>
 <pre class="text"><code>henry@DESKTOP-JLRA007:~$ ls -l
 total 4
 drwxr-xr-x 5 henry henry 4096 Nov 10 18:28 practicas</code></pre>
+<p>Con el comando <code>ls -a</code></p>
 <p><strong>Ejemplo:</strong></p>
 <pre class="bash"><code>henry@DESKTOP-JLRA007:~$ ls -a</code></pre>
 <p><strong>Resultado:</strong></p>
 <pre class="text"><code>henry@DESKTOP-JLRA007:~$ ls -a
 .   .bash_history  .bashrc  .config     .landscape  .motd_shown  practicas
 ..  .bash_logout   .cache   .dircolors  .local      .profile</code></pre>
-<p><strong>Ejemplo práctico:</strong></p>
+<p>Con el comando <code>ls -la</code> <strong>Ejemplo
+práctico:</strong></p>
 <pre class="bash"><code>henry@DESKTOP-JLRA007:~$ ls -la</code></pre>
 <p><strong>Resultado:</strong></p>
 <pre class="text"><code>henry@DESKTOP-JLRA007:~$ ls -la
@@ -539,6 +542,7 @@ drwx------ 3 henry henry 4096 Nov  9 12:27 .local
 -rw-rw-r-- 1 henry henry    0 Nov 11 20:15 .motd_shown
 -rw-r--r-- 1 henry henry  807 Nov  9 11:52 .profile
 drwxr-xr-x 5 henry henry 4096 Nov 10 18:28 practicas</code></pre>
+<p>Con el comando <code>ls -ld directorio</code></p>
 <p><strong>Ejemplo:</strong></p>
 <pre class="bash"><code>henry@DESKTOP-JLRA007:~$ ls -ld practicas</code></pre>
 <p><strong>Resultado:</strong></p>
@@ -551,18 +555,21 @@ los ocultos, además de sus permisos y propietarios.</p>
 <h2>2.3. Comando <code>cd</code></h2>
 <p>El comando <code>cd</code> (Change Directory) permite cambiar el
 directorio de trabajo.</p>
+<p><code>cd</code> con ruta</p>
 <p><strong>Ejemplo:</strong></p>
 <pre class="bash"><code>henry@DESKTOP-JLRA007:~$ cd /home/henry/practicas</code></pre>
 <p><strong>Resultado:</strong></p>
 <pre class="text"><code>henry@DESKTOP-JLRA007:~$ cd /home/henry/practicas
 henry@DESKTOP-JLRA007:~/practicas$</code></pre>
 <p>Permite acceder directamente a la ruta indicada.</p>
+<p><code>cd ..</code></p>
 <p><strong>Ejemplo:</strong></p>
 <pre class="bash"><code>henry@DESKTOP-JLRA007:~/practicas$ cd ..</code></pre>
 <p><strong>Resultado:</strong></p>
 <pre class="text"><code>henry@DESKTOP-JLRA007:~/practicas$ cd ..
 henry@DESKTOP-JLRA007:~$</code></pre>
 <p>Permite subir un nivel hacia el directorio padre.</p>
+<p><code>cd ~</code></p>
 <p><strong>Ejemplo:</strong></p>
 <pre class="bash"><code>henry@DESKTOP-JLRA007:~/practicas$ cd ~</code></pre>
 <p><strong>Resultado:</strong></p>
@@ -575,13 +582,19 @@ henry@DESKTOP-JLRA007:~$</code></pre>
 <p>En Linux existen dos formas principales de especificar la ubicación
 de un archivo o directorio:</p>
 <p><strong>Ruta absoluta:</strong> comienza desde la raíz del sistema de
-archivos (<code>/</code>) e indica la ubicación completa.</p>
+archivos (<code>/</code>) e indica la ubicación completa
+<code>/home/henry/practicas</code>.</p>
+<p>Su uso: cuando necesitas cambiar de directorio y no tienes acceso
+desde tu ruta actual. Además, cuando quieres ejecutar un comando en un
+directorio o archivo los cuales no tienes acceso desde tu posición
+actual.</p>
 <p>Ejemplo:</p>
-<pre class="bash"><code>/home/henry/practicas</code></pre>
+<pre class="bash"><code>henry@DESKTOP-JLRA007:~$ ls ~/practicas/archivos</code></pre>
 <p><strong>Ruta relativa:</strong> indica una ubicación tomando como
 referencia el directorio actual.</p>
+<p>Su uso: Para ejecutar un comando hacia un directorio o archivo.</p>
 <p>Ejemplo:</p>
-<pre class="bash"><code>cd practicas</code></pre>
+<pre class="bash"><code>henry@DESKTOP-JLRA007:~/practicas$ ls -l original.txt</code></pre>
 <p>Este comando funciona si existe un directorio llamado
 <code>practicas</code> dentro de la ubicación actual.</p>
 </div>

@@ -1,6 +1,6 @@
 ---
 title: "Linux y administración del sistema"
-author: "Chalcualan Silva Henry Patricio"
+author:
 date: "2026-11-12"
 output:
   html_document:
@@ -89,7 +89,7 @@ Este comando me permitió identificar mi ubicación dentro del sistema de archiv
 
 ## 2.2. Comando `ls`
 
-El comando `ls` permite listar los archivos y directorios de la ubicación actual.
+El comando `ls` (list) permite listar los archivos y directorios de la ubicación actual.
 
 **Ejemplo:**
 
@@ -114,6 +114,8 @@ Existen algunas opciones que permiten obtener información adicional:
 
 **Ejemplos de los distintos comandos**
 
+Con el comando `ls -l` 
+
 **Ejemplo:**
 
 ```bash
@@ -126,6 +128,8 @@ henry@DESKTOP-JLRA007:~$ ls -l
 total 4
 drwxr-xr-x 5 henry henry 4096 Nov 10 18:28 practicas
 ```
+Con el comando `ls -a`
+
 **Ejemplo:**
 
 ```bash
@@ -138,7 +142,7 @@ henry@DESKTOP-JLRA007:~$ ls -a
 .   .bash_history  .bashrc  .config     .landscape  .motd_shown  practicas
 ..  .bash_logout   .cache   .dircolors  .local      .profile
 ```
-
+Con el comando `ls -la`
 **Ejemplo práctico:**
 
 ```bash
@@ -162,6 +166,8 @@ drwx------ 3 henry henry 4096 Nov  9 12:27 .local
 -rw-r--r-- 1 henry henry  807 Nov  9 11:52 .profile
 drwxr-xr-x 5 henry henry 4096 Nov 10 18:28 practicas
 ```
+Con el comando `ls -ld directorio`
+
 **Ejemplo:**
 
 ```bash
@@ -173,11 +179,14 @@ henry@DESKTOP-JLRA007:~$ ls -ld practicas
 henry@DESKTOP-JLRA007:~$ ls -ld practicas
 drwxr-xr-x 5 henry henry 4096 Nov 10 18:28 practicas
 ```
+
 Este comando me permitió observar tanto los archivos visibles como los ocultos, además de sus permisos y propietarios.
 
 ## 2.3. Comando `cd`
 
 El comando `cd` (Change Directory) permite cambiar el directorio de trabajo.
+
+`cd` con ruta
 
 **Ejemplo:**
 
@@ -193,6 +202,8 @@ henry@DESKTOP-JLRA007:~/practicas$
 
 Permite acceder directamente a la ruta indicada.
 
+`cd ..`
+
 **Ejemplo:**
 
 ```bash
@@ -206,6 +217,8 @@ henry@DESKTOP-JLRA007:~$
 ```
 
 Permite subir un nivel hacia el directorio padre.
+
+`cd ~`
 
 **Ejemplo:**
 
