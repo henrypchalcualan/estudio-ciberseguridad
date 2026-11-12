@@ -1,0 +1,259 @@
+---
+title: "Linux y administración del sistema"
+author: "Chalcualan Silva Henry Patricio"
+date: "2026-11-12"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    number_sections: false
+    self_contained: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# 1. Introducción a Linux
+
+## 1.1. ¿Qué es Linux?
+
+Linux es un sistema operativo de código abierto basado en el kernel Linux. Se utiliza en computadoras personales, servidores, dispositivos móviles, sistemas embebidos y diferentes infraestructuras tecnológicas.
+
+Una de sus principales características es que permite interactuar con el sistema mediante una interfaz gráfica o una terminal de comandos.
+
+En el ámbito de la informática y la ciberseguridad, conocer Linux es importante porque muchas herramientas, servidores y sistemas utilizados en estos campos funcionan sobre este sistema operativo.
+
+## 1.2. ¿Qué es una distribución Linux?
+
+Una distribución Linux es un sistema operativo que utiliza el kernel Linux junto con diferentes programas, herramientas y configuraciones para ofrecer un entorno funcional.
+
+Algunas distribuciones conocidas son:
+
+- **Ubuntu:** distribución orientada a la facilidad de uso y al trabajo cotidiano.
+- **Debian:** conocida por su estabilidad y por ser la base de otras distribuciones.
+- **Kali Linux:** distribución orientada a pruebas de penetración y auditorías de seguridad.
+- **Fedora:** distribución que incorpora tecnologías relativamente recientes.
+
+## 1.3. Mi entorno de aprendizaje
+
+Para comenzar a practicar Linux, configuré **WSL2 (Windows Subsystem for Linux 2)** en Windows e instalé Ubuntu.
+
+WSL2 permite ejecutar un entorno Linux dentro de Windows sin necesidad de utilizar una máquina virtual tradicional.
+
+Mi entorno de trabajo utiliza:
+
+- **Sistema anfitrión:** Windows.
+- **Subsistema:** WSL2.
+- **Distribución:** Ubuntu.
+- **Terminal:** Bash.
+
+Este entorno me permite practicar comandos, administrar archivos, comprender permisos y familiarizarme con la estructura del sistema de archivos Linux.
+
+## 1.4. Objetivos de aprendizaje
+
+Durante esta etapa busco aprender a:
+
+- Utilizar la terminal de Linux.
+- Navegar por el sistema de archivos.
+- Crear, modificar, copiar, mover y eliminar archivos.
+- Comprender los inodes y los enlaces físicos y simbólicos. 
+- Administrar permisos, propietarios y grupos.
+- Gestionar usuarios, procesos y servicios.
+- Comprender los fundamentos de administración del sistema.
+
+
+# 2. Navegación por el sistema de archivos
+
+La navegación por el sistema de archivos es una de las habilidades fundamentales para trabajar en Linux desde la terminal. Permite conocer la ubicación actual, explorar directorios y desplazarse entre diferentes ubicaciones del sistema.
+
+## 2.1. Comando `pwd`
+
+El comando `pwd` (Print Working Directory) muestra la ruta absoluta del directorio en el que nos encontramos.
+
+**Ejemplo práctico:**
+
+```bash
+henry@DESKTOP-JLRA007:~$ pwd
+```
+
+**Resultado:**
+
+```text
+henry@DESKTOP-JLRA007:~$ pwd
+/home/henry
+```
+
+Este comando me permitió identificar mi ubicación dentro del sistema de archivos de Linux.
+
+## 2.2. Comando `ls`
+
+El comando `ls` permite listar los archivos y directorios de la ubicación actual.
+
+**Ejemplo:**
+
+```bash
+henry@DESKTOP-JLRA007:~$ ls
+```
+
+**Resultado:**
+```text
+henry@DESKTOP-JLRA007:~$ ls
+practicas
+```
+
+Existen algunas opciones que permiten obtener información adicional:
+
+| Comando | Función |
+|---|---|
+| `ls -l` | Muestra información detallada de archivos y directorios. |
+| `ls -a` | Incluye archivos y directorios ocultos. |
+| `ls -la` | Combina la información detallada con la visualización de elementos ocultos. |
+| `ls -ld directorio` | Muestra información del directorio indicado, sin listar su contenido. |
+
+**Ejemplos de los distintos comandos**
+
+**Ejemplo:**
+
+```bash
+henry@DESKTOP-JLRA007:~$ ls -l
+```
+
+**Resultado:**
+```text
+henry@DESKTOP-JLRA007:~$ ls -l
+total 4
+drwxr-xr-x 5 henry henry 4096 Nov 10 18:28 practicas
+```
+**Ejemplo:**
+
+```bash
+henry@DESKTOP-JLRA007:~$ ls -a
+```
+
+**Resultado:**
+```text
+henry@DESKTOP-JLRA007:~$ ls -a
+.   .bash_history  .bashrc  .config     .landscape  .motd_shown  practicas
+..  .bash_logout   .cache   .dircolors  .local      .profile
+```
+
+**Ejemplo práctico:**
+
+```bash
+henry@DESKTOP-JLRA007:~$ ls -la
+```
+**Resultado:**
+```text
+henry@DESKTOP-JLRA007:~$ ls -la
+total 52
+drwxr-x--- 7 henry henry 4096 Nov 11 20:15 .
+drwxr-xr-x 3 root  root  4096 Nov  9 11:52 ..
+-rw------- 1 henry henry 4113 Nov 10 20:39 .bash_history
+-rw-r--r-- 1 henry henry  220 Nov  9 11:52 .bash_logout
+-rw-r--r-- 1 henry henry 3771 Nov  9 12:45 .bashrc
+drwxr-x--- 4 henry henry 4096 Nov  9 11:54 .cache
+drwxr-x--- 3 henry henry 4096 Nov  9 11:54 .config
+-rw-r--r-- 1 henry henry 3450 Nov  9 12:34 .dircolors
+drwxr-xr-x 2 henry henry 4096 Nov 11 20:15 .landscape
+drwx------ 3 henry henry 4096 Nov  9 12:27 .local
+-rw-rw-r-- 1 henry henry    0 Nov 11 20:15 .motd_shown
+-rw-r--r-- 1 henry henry  807 Nov  9 11:52 .profile
+drwxr-xr-x 5 henry henry 4096 Nov 10 18:28 practicas
+```
+**Ejemplo:**
+
+```bash
+henry@DESKTOP-JLRA007:~$ ls -ld practicas
+```
+
+**Resultado:**
+```text
+henry@DESKTOP-JLRA007:~$ ls -ld practicas
+drwxr-xr-x 5 henry henry 4096 Nov 10 18:28 practicas
+```
+Este comando me permitió observar tanto los archivos visibles como los ocultos, además de sus permisos y propietarios.
+
+## 2.3. Comando `cd`
+
+El comando `cd` (Change Directory) permite cambiar el directorio de trabajo.
+
+**Ejemplo:**
+
+```bash
+henry@DESKTOP-JLRA007:~$ cd /home/henry/practicas
+```
+
+**Resultado:**
+```text
+henry@DESKTOP-JLRA007:~$ cd /home/henry/practicas
+henry@DESKTOP-JLRA007:~/practicas$
+```
+
+Permite acceder directamente a la ruta indicada.
+
+**Ejemplo:**
+
+```bash
+henry@DESKTOP-JLRA007:~/practicas$ cd ..
+```
+
+**Resultado:**
+```text
+henry@DESKTOP-JLRA007:~/practicas$ cd ..
+henry@DESKTOP-JLRA007:~$
+```
+
+Permite subir un nivel hacia el directorio padre.
+
+**Ejemplo:**
+
+```bash
+henry@DESKTOP-JLRA007:~/practicas$ cd ~
+```
+
+**Resultado:**
+```text
+henry@DESKTOP-JLRA007:~/practicas$ cd ~
+henry@DESKTOP-JLRA007:~$
+```
+
+Permite acceder al directorio personal del usuario actual.
+
+## 2.4. Rutas absolutas y relativas
+
+En Linux existen dos formas principales de especificar la ubicación de un archivo o directorio:
+
+**Ruta absoluta:** comienza desde la raíz del sistema de archivos (`/`) e indica la ubicación completa `/home/henry/practicas`.
+
+Su uso: cuando necesitas cambiar de directorio y no tienes acceso desde tu ruta actual. Además, cuando quieres ejecutar un comando en un directorio o archivo los cuales no tienes acceso desde tu posición actual.
+
+Ejemplo:
+
+```bash
+henry@DESKTOP-JLRA007:~$ ls ~/practicas/archivos
+```
+
+**Ruta relativa:** indica una ubicación tomando como referencia el directorio actual.
+
+Su uso: Para ejecutar un comando hacia un directorio o archivo.
+
+Ejemplo:
+
+```bash
+henry@DESKTOP-JLRA007:~/practicas$ ls -l original.txt
+```
+
+Este comando funciona si existe un directorio llamado `practicas` dentro de la ubicación actual.
+
+## 2.5. Lo aprendido
+
+Durante estas prácticas aprendí a:
+
+- Identificar mi ubicación mediante `pwd`.
+- Listar archivos y directorios mediante `ls`.
+- Consultar información detallada utilizando opciones como `-l` y `-a`.
+- Cambiar de directorio mediante `cd`.
+- Diferenciar entre rutas absolutas y relativas.
+- Comprender el uso de `..` y `~` para navegar por el sistema.

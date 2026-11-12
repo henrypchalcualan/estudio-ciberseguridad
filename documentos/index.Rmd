@@ -12,3 +12,80 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+# Bienvenido a mi portafolio de ciberseguridad
+
+Este sitio reúne mi proceso de aprendizaje en Linux, redes, programación y ciberseguridad.
+
+Estoy construyendo este portafolio para documentar mis prácticas, conocimientos adquiridos, dificultades y proyectos.
+
+Mi objetivo es desarrollar una base técnica sólida y aplicar progresivamente lo aprendido en ejercicios y proyectos prácticos.
+
+## ¿Qué encontrarás aquí?
+
+En este portafolio registraré:
+
+- Conceptos estudiados y explicaciones con mis propias palabras.
+- Comandos y herramientas que vaya aprendiendo.
+- Ejercicios prácticos y sus resultados.
+- Errores encontrados y cómo los solucioné.
+- Proyectos desarrollados durante mi aprendizaje.
+
+## Ruta de aprendizaje
+
+Estas son las principales áreas que voy a estudiar:
+
+### 1. Linux y administración del sistema
+
+Aprendizaje del terminal, sistema de archivos, permisos, usuarios, grupos, procesos y administración básica de Linux.
+
+**Estado:** En progreso.
+
+### 2. Bash y automatización
+
+Aprendizaje de scripts Bash para automatizar tareas y administrar el sistema desde la terminal.
+
+**Estado:** Pendiente.
+
+### 3. Redes informáticas
+
+Estudio de direcciones IP, DNS, DHCP, puertos, protocolos TCP y UDP, y herramientas de diagnóstico de red.
+
+**Estado:** Pendiente.
+
+### 4. Python
+
+Aprendizaje de Python aplicado a la programación, automatización y análisis de información.
+
+**Estado:** En progreso.
+
+### 5. Fundamentos de ciberseguridad
+
+Estudio de vulnerabilidades, amenazas, riesgos, medidas de protección y prácticas de seguridad en entornos controlados.
+
+**Estado:** Pendiente.
+
+### 6. Proyectos prácticos
+
+Aplicación de los conocimientos mediante pequeños proyectos que permitan demostrar lo aprendido.
+
+**Estado:** Pendiente.
+
+## Mi metodología de aprendizaje
+
+Quiero aprender de manera progresiva y práctica. Por eso, cada tema incluirá:
+
+1. Una explicación del concepto.
+2. Ejemplos de uso.
+3. Ejercicios realizados.
+4. Resultados y observaciones.
+5. Conclusiones sobre lo aprendido.
+
+También registraré los errores y dificultades, porque forman parte del proceso de aprendizaje.
+
+## Inicio del registro público
+
+**11 de noviembre de 2026**
+
+Esta es la fecha en la que inicié el registro público de mi aprendizaje en este repositorio. Los avances posteriores quedarán documentados mediante nuevas publicaciones y el historial de cambios de GitHub.
+
